@@ -36,8 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
-     <Compile Include="Assets\Scripts\RayCast.cs" />
+     <Compile Include="Assets\Scripts\Player\FirstPersonController.cs" />
+     <Compile Include="Assets\Scripts\Ai\Ai.cs" />
+     <Compile Include="Assets\Scripts\Player\RayCast.cs" />
      <Compile Include="Assets\Scripts\doorController.cs" />
      <Compile Include="Assets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
      <Compile Include="Assets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
@@ -47,7 +48,7 @@
      <Compile Include="Assets\InputSystem\StarterAssetsInputs.cs" />
      <Compile Include="Assets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
      <Compile Include="Assets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
-     <Compile Include="Assets\Scripts\BasicRigidBodyPush.cs" />
+     <Compile Include="Assets\Scripts\Player\BasicRigidBodyPush.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <None Include="Assets\license.txt" />
     <Reference Include="UnityEngine">
