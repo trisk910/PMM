@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{975FA587-9006-F853-AFC2-2D5423BC8DBB}</ProjectGuid>
+    <ProjectGuid>{ED087045-E388-508B-7B49-37904FD67E18}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,20 +59,22 @@
     <Compile Include="Assets\Scripts\12 Swapping Teleportation and Continuous Movement\TeleportationControllerFixed.cs" />
     <Compile Include="Assets\Scripts\6 Teleportation\TeleportationController.cs" />
     <Compile Include="Assets\Scripts\14 Climbing\ClimbProvider.cs" />
+    <Compile Include="Assets\Scripts\Ai\Ai.cs" />
+    <Compile Include="Assets\Scripts\Linterna\LinternaFuncion.cs" />
     <Compile Include="Assets\Scripts\2 Grab Interactables\FireBullet.cs" />
     <Compile Include="Assets\Scripts\11 Wrist UI\WristUI.cs" />
     <Compile Include="Assets\Scripts\12 Swapping Teleportation and Continuous Movement\LocomotionManager.cs" />
     <Compile Include="Assets\Scripts\14 Climbing\XRDirectClimbInteractor.cs" />
     <Compile Include="Assets\Scripts\3 Inputs and Hand Animation\InputReader.cs" />
     <Compile Include="Assets\Scripts\4 XR Direct Interactors\HandDirectInteractor.cs" />
+    <Compile Include="Assets\Other\FPSController.cs" />
     <Compile Include="Assets\Scripts\10 Buttons\SlidingDoor.cs" />
     <Compile Include="Assets\Scripts\10 Buttons\VRButton.cs" />
     <Compile Include="Assets\Scripts\11 Wrist UI\ShotCounter.cs" />
-    <Compile Include="Assets\Scripts\5 XR Ray Interactors\HandComplete.cs" />
     <Compile Include="Assets\_Flashlight PRO\_Assets\scripts\Flashlight_PRO.cs" />
-    <Compile Include="Assets\Other\FPSController.cs" />
-    <Compile Include="Assets\Scripts\Ai\Ai.cs" />
-    <Compile Include="Assets\LinternaFuncion.cs" />
+    <Compile Include="Assets\Scripts\5 XR Ray Interactors\HandComplete.cs" />
+    <Compile Include="Assets\Scripts\Linterna\addLinternaLife.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
