@@ -2898,6 +2898,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8244683699834339346, guid: 9dc28679b53aa474c856d7c33902fb1d, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8244683699834339347, guid: 9dc28679b53aa474c856d7c33902fb1d, type: 3}
       propertyPath: m_Name
       value: XR Origin
