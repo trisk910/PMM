@@ -14,14 +14,14 @@ public class Ai : MonoBehaviour
     public string state = "idle";
     private bool followPlayer;
     private Animator anim;
-     void Start()
+    void Start()
     {
         nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
         anim = GetComponent<Animator>();
     }
     void Update()
     {
-        if(followPlayer)
+        if (followPlayer)
             nav.destination = follow.transform.position;
         else
             nav.destination = this.transform.position;
@@ -29,26 +29,45 @@ public class Ai : MonoBehaviour
         DemonStates();
 
     }
+    public void setDemonState(string state)
+    {
+        this.state = state;
+    }
     public void DemonStates()
     {
         if (state == "idle")
         {
             nav.speed = 0;
+            anim.SetBool("isWalking", false);
             followPlayer = false;
         }
-        if(state == "follow")
+        if (state == "follow")
         {
             nav.speed = demonSpeed;
+            anim.SetBool("isWalking", true);      
+           
             followPlayer = true;
+            StartCoroutine(StopFollow());
         }
-        if(state == "attack")
+        if (state == "attack")
         {
-
+            anim.SetBool("isAttacking", true);
+            anim.SetBool("isAttacking", false);
         }
-        if(state == "disappear")
+        if (state == "disappear")
         {//poner sonido de grito i desactivar
             followPlayer = false;
+            StartCoroutine(Disappear());
         }
-
+    }
+    private IEnumerator StopFollow()
+    {
+        yield return new WaitForSeconds(10.0f);
+        setDemonState("disappear");
+    }
+    private IEnumerator Disappear()
+    {
+        yield return new WaitForSeconds(2.0f);
+        this.gameObject.SetActive(false);
     }
 }

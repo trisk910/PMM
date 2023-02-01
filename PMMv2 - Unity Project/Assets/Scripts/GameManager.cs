@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     //Demonio
     public GameObject Demonio;
+    public Transform spawnPointPasillo2nPiso;
    
     void Start()
     {
@@ -80,7 +81,7 @@ public class GameManager : MonoBehaviour
         Pistola.SetActive(false);
 
         //Demonio
-        Demonio.SetActive(false);
+        //Demonio.SetActive(false);
     }
 
 
@@ -173,5 +174,15 @@ public class GameManager : MonoBehaviour
     public void showPistola()
     {
         Pistola.SetActive(true);
+    }
+
+    //Demonio
+    public void demonioCorrePasillo()
+    {
+        //Demonio.SetActive(true);
+        GameObject DemonClone = Instantiate(Demonio, spawnPointPasillo2nPiso.position, transform.rotation);
+        DemonClone.GetComponent<Ai>().setDemonState("follow");
+       // Demonio.transform.position = spawnPointPasillo2nPiso.transform.position;
+
     }
 }

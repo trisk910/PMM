@@ -62,17 +62,23 @@
     <Compile Include="Assets\Scripts\14 Climbing\CharacterControllerGravity.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\Scripts\Player\Martillo.cs" />
+    <Compile Include="Assets\Scripts\Keys\Llave666.cs" />
     <Compile Include="Assets\Scripts\12 Swapping Teleportation and Continuous Movement\TeleportationControllerFixed.cs" />
     <Compile Include="Assets\Scripts\6 Teleportation\TeleportationController.cs" />
     <Compile Include="Assets\Scripts\Keys\LlaveCruz.cs" />
     <Compile Include="Assets\Scripts\14 Climbing\ClimbProvider.cs" />
     <Compile Include="Assets\Scripts\Ai\Ai.cs" />
+    <Compile Include="Assets\Scripts\Player\Destornillador.cs" />
     <Compile Include="Assets\Scripts\Linterna\LinternaFuncion.cs" />
     <Compile Include="Assets\Materials\FFOSBodySocketInventory\BodySocketInventory.cs" />
+    <Compile Include="Assets\Scripts\Medallones\Gula.cs" />
+    <Compile Include="Assets\Scripts\Medallones\Codicia.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\Scripts\11 Wrist UI\WristUI.cs" />
     <Compile Include="Assets\Scripts\12 Swapping Teleportation and Continuous Movement\LocomotionManager.cs" />
+    <Compile Include="Assets\Scripts\Keys\LlaveEstrella.cs" />
+    <Compile Include="Assets\Scripts\Medallones\Lujuria.cs" />
     <Compile Include="Assets\Scripts\Medallones\Ira.cs" />
     <Compile Include="Assets\Scripts\Medallones\Envidia.cs" />
     <Compile Include="Assets\Scripts\14 Climbing\XRDirectClimbInteractor.cs" />
@@ -85,6 +91,7 @@
     <Compile Include="Assets\Scripts\10 Buttons\SlidingDoor.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Scripts\10 Buttons\VRButton.cs" />
+    <Compile Include="Assets\Scripts\Medallones\Pereza.cs" />
     <Compile Include="Assets\Scripts\11 Wrist UI\ShotCounter.cs" />
     <Compile Include="Assets\Scripts\Player\Palanca.cs" />
     <Compile Include="Assets\Materials\FFOSBodySocketInventory\UltraLowPoly\FireBullet.cs" />
@@ -92,13 +99,7 @@
     <Compile Include="Assets\_Flashlight PRO\_Assets\scripts\Flashlight_PRO.cs" />
     <Compile Include="Assets\Scripts\5 XR Ray Interactors\HandComplete.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Player\Destornillador.cs" />
-    <Compile Include="Assets\Scripts\Medallones\Gula.cs" />
-    <Compile Include="Assets\Scripts\Medallones\Pereza.cs" />
-    <Compile Include="Assets\Scripts\Medallones\Codicia.cs" />
-    <Compile Include="Assets\Scripts\Medallones\Lujuria.cs" />
-    <Compile Include="Assets\Scripts\Keys\LlaveEstrella.cs" />
-    <Compile Include="Assets\Scripts\Keys\Llave666.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger2pisoPasillo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
