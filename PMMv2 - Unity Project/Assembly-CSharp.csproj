@@ -77,6 +77,7 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\Scripts\11 Wrist UI\WristUI.cs" />
     <Compile Include="Assets\Scripts\12 Swapping Teleportation and Continuous Movement\LocomotionManager.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger2pisoPasillo.cs" />
     <Compile Include="Assets\Scripts\Keys\LlaveEstrella.cs" />
     <Compile Include="Assets\Scripts\Medallones\Lujuria.cs" />
     <Compile Include="Assets\Scripts\Medallones\Ira.cs" />
@@ -99,7 +100,7 @@
     <Compile Include="Assets\_Flashlight PRO\_Assets\scripts\Flashlight_PRO.cs" />
     <Compile Include="Assets\Scripts\5 XR Ray Interactors\HandComplete.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Ai\Trigger2pisoPasillo.cs" />
+    <Compile Include="Assets\Scripts\Player\Pistola\DestroyBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
