@@ -12,18 +12,14 @@ public class LlaveCruz : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GameManager");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
- 
-    private void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "cerraduraCruz")
+        if (other.gameObject.tag == "cerraduraCruz")
         {
             gm.GetComponent<GameManager>().hideLlaveCruz();
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

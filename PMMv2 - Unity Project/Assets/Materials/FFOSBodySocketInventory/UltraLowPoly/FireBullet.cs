@@ -6,6 +6,7 @@ using System;
 public class FireBullet : MonoBehaviour
 {
     public float speed = 50f;
+    public float Ammo = 0f;
     public GameObject bulletObj;
     public Transform frontOfGun;
     private Animator gunAnim;
@@ -19,16 +20,23 @@ public class FireBullet : MonoBehaviour
     public static event Action GunFired;
     public void Fire()
     {
-        GetComponent<AudioSource>().Play();
-        gunAnim.SetBool("Shoot", true);
-        GameObject spawnedBullet = Instantiate(bulletObj, frontOfGun.position, frontOfGun.rotation);
-        spawnedBullet.GetComponent<Rigidbody>().velocity = speed * frontOfGun.forward;
-        GameObject spawnedFlash = Instantiate(muzzleFlash, frontOfGun.position, frontOfGun.rotation);
-        Destroy(spawnedFlash, 1f);
-        Destroy(spawnedBullet, 5f);
-        gunAnim.SetBool("Shoot", false);
-        GunFired?.Invoke();
+        if (Ammo > 0)
+        {
+            GetComponent<AudioSource>().Play();
+            gunAnim.SetBool("Shoot", true);
+            GameObject spawnedBullet = Instantiate(bulletObj, frontOfGun.position, frontOfGun.rotation);
+            spawnedBullet.GetComponent<Rigidbody>().velocity = speed * frontOfGun.forward;
+            GameObject spawnedFlash = Instantiate(muzzleFlash, frontOfGun.position, frontOfGun.rotation);
+            Destroy(spawnedFlash, 1f);
+            Destroy(spawnedBullet, 5f);
+            gunAnim.SetBool("Shoot", false);
+            GunFired?.Invoke();
+        }
+    }
 
+    public void AddOneBullet()
+    {
+        Ammo++;
     }
 
 

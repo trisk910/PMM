@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 502247348}
   - component: {fileID: 502247349}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DoorHandle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,9 +54,9 @@ GameObject:
   m_Component:
   - component: {fileID: 571232872}
   - component: {fileID: 571232873}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: KeyHole
-  m_TagString: cerraduraCruz
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,8 +69,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571232871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9456, z: -0.356}
-  m_LocalScale: {x: 1, y: 0.55267, z: 0.47061}
+  m_LocalPosition: {x: -0, y: 1.115, z: -0.002}
+  m_LocalScale: {x: 1.1807736, y: 15.181274, z: 7.5262895}
   m_Children: []
   m_Father: {fileID: 7040993568447488365}
   m_RootOrder: 2
@@ -83,7 +83,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571232871}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 696194816}
   - component: {fileID: 696194817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DoorHandle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 490864150}
   - component: {fileID: 490864148}
   - component: {fileID: 490864149}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1, z: 0.4}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.342718, y: 0.97645044, z: 4.8969994}
+  m_ConnectedAnchor: {x: -0.342718, y: 1.0379996, z: 4.8969994}
   m_UseSpring: 0
   m_Spring:
     spring: 0.4
@@ -411,7 +411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7621944802314178613}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 7101410006555298447}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -1.0267406, y: 0.00000023841858, z: -0.5780034}
-  m_LocalScale: {x: 1, y: 0.93942, z: 1.6542048}
+  m_LocalScale: {x: 1, y: 1, z: 1.6542048}
   m_Children:
   - {fileID: 7040993568447488365}
   - {fileID: 4453592670243906432}
@@ -457,10 +457,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b4370d0be5894f8c8f6f78722bd3df1, type: 2}
+    - target: {fileID: 1425594968397503937, guid: 8d79cc157155fde469e81c767af26dfa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1985922505432220854, guid: 8d79cc157155fde469e81c767af26dfa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b4370d0be5894f8c8f6f78722bd3df1, type: 2}
+    - target: {fileID: 4402089193145427478, guid: 8d79cc157155fde469e81c767af26dfa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4427866358032000170, guid: 8d79cc157155fde469e81c767af26dfa, type: 3}
       propertyPath: m_Size.y
       value: 0.7686823
@@ -528,6 +536,14 @@ PrefabInstance:
     - target: {fileID: 6544444022714758158, guid: 8d79cc157155fde469e81c767af26dfa, type: 3}
       propertyPath: m_Name
       value: DoorFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6544444022714758158, guid: 8d79cc157155fde469e81c767af26dfa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688950130717295652, guid: 8d79cc157155fde469e81c767af26dfa, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7359526167546223345, guid: 8d79cc157155fde469e81c767af26dfa, type: 3}
       propertyPath: m_Size.x
