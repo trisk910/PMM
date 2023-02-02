@@ -14,7 +14,7 @@ public class Trigger2pisoPasillo : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            gm.GetComponent<GameManager>().demonioCorrePasillo();
+            gm.GetComponent<GameManager>().demonioCorrePasilloP2();
             Destroy(this.gameObject);
         }
     }

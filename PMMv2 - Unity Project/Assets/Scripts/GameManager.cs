@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,7 +38,6 @@ public class GameManager : MonoBehaviour
     public GameObject Pistola;
 
     //boleanas MedallonesCompletos
-    public bool completeMedallon = false;
     public bool cEnvidia = false;
     public bool cCodicia = false;
     public bool cGula = false;
@@ -48,11 +48,17 @@ public class GameManager : MonoBehaviour
 
     //Demonio
     public GameObject Demonio;
-    public Transform spawnPointPasillo2nPiso;
+    public Transform spawnPointPasillo2nPisoPasillo;
+    public Transform spawnPointPasillo2nPisoHab;
+    public Transform spawnPoint1erPisoGaraje;
+    public Transform spawnPoint1erPisoCocina;
+    public Transform spawnPoint1erPisoBanyo;
+
+    public int ammo = 0;
    
     void Start()
     {
-        //Llasves
+        //Llaves
         llaveCruz.SetActive(false);
         CruzDoorHandlerCruz1.GetComponent<BoxCollider>().enabled = false;
         CruzDoorHandlerCruz2.GetComponent<BoxCollider>().enabled = false;
@@ -87,7 +93,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-    
+        if (cCodicia && cEnvidia && cGula && cIra && cLujuria && cOrgullo && cPereza)
+            winGame();
     }
     
     //Funciones Llaves
@@ -176,13 +183,60 @@ public class GameManager : MonoBehaviour
         Pistola.SetActive(true);
     }
 
-    //Demonio
-    public void demonioCorrePasillo()
+    //Demonio Spawns
+    public void demonioCorrePasilloP2()
     {
-        //Demonio.SetActive(true);
-        GameObject DemonClone = Instantiate(Demonio, spawnPointPasillo2nPiso.position, transform.rotation);
+        GameObject DemonClone = Instantiate(Demonio, spawnPointPasillo2nPisoPasillo.position, transform.rotation);
         DemonClone.GetComponent<Ai>().setDemonState("follow");
-       // Demonio.transform.position = spawnPointPasillo2nPiso.transform.position;
+    }
+    public void demonioCorreHabP2()
+    {
+        GameObject DemonClone = Instantiate(Demonio, spawnPointPasillo2nPisoHab.position, transform.rotation);
+        DemonClone.GetComponent<Ai>().setDemonState("follow");
+    }
 
+    public void demonioCorreGarajeP1()
+    {
+        GameObject DemonClone = Instantiate(Demonio, spawnPoint1erPisoGaraje.position, transform.rotation);
+        DemonClone.GetComponent<Ai>().setDemonState("follow");
+    }
+
+    public void demonioCorreCocinaP1()
+    {
+        GameObject DemonClone = Instantiate(Demonio, spawnPoint1erPisoCocina.position, transform.rotation);
+        DemonClone.GetComponent<Ai>().setDemonState("follow");
+    }
+
+    public void demonioCorreBanyoP1()
+    {
+        GameObject DemonClone = Instantiate(Demonio, spawnPoint1erPisoBanyo.position, transform.rotation);
+        DemonClone.GetComponent<Ai>().setDemonState("follow");
+    }
+
+
+    //Estado Juego
+    public void endGame()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void winGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    //Municion Pistola
+    public int getAmmo()
+    {
+        return ammo;
+    }
+    public void shootAmmo()
+    {
+        ammo--;
+        if (ammo < 0)
+            ammo = 0;
+    }
+    public void addAmmo()
+    {
+        ammo++;
     }
 }

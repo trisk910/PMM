@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyBullet : MonoBehaviour
 {
-    public void caseDestroyBullet()
+    public void DestroyBulletOnGrab()
     {
         Destroy(this.gameObject);
     }

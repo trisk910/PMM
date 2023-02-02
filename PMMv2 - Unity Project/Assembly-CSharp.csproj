@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Ai\Ai.cs" />
     <Compile Include="Assets\Scripts\Player\Destornillador.cs" />
     <Compile Include="Assets\Scripts\Linterna\LinternaFuncion.cs" />
+    <Compile Include="Assets\Scripts\Player\Pistola\DestroyBullet.cs" />
     <Compile Include="Assets\Materials\FFOSBodySocketInventory\BodySocketInventory.cs" />
     <Compile Include="Assets\Scripts\Medallones\Gula.cs" />
     <Compile Include="Assets\Scripts\Medallones\Codicia.cs" />
@@ -100,7 +101,10 @@
     <Compile Include="Assets\_Flashlight PRO\_Assets\scripts\Flashlight_PRO.cs" />
     <Compile Include="Assets\Scripts\5 XR Ray Interactors\HandComplete.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Player\Pistola\DestroyBullet.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger2pisoHab.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger1pisoGaraje.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger1PisoCocina.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger1PisoBanyo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

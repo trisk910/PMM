@@ -26,6 +26,7 @@ TagManager:
   - BoxMedallonCodiciaD
   - cerraduraEstrella
   - cerradura666
+  - bullet
   layers:
   - Default
   - TransparentFX

@@ -12,9 +12,17 @@ public class FireBullet : MonoBehaviour
     private Animator gunAnim;
     public GameObject muzzleFlash;
 
+    private GameObject gm;
+
     private void Start()
     {
         gunAnim = GetComponent<Animator>();
+        gm = GameObject.FindGameObjectWithTag("GameManager");
+    }
+
+    private void Update()
+    {
+        Ammo = gm.GetComponent<GameManager>().getAmmo();
     }
 
     public static event Action GunFired;
@@ -28,16 +36,14 @@ public class FireBullet : MonoBehaviour
             spawnedBullet.GetComponent<Rigidbody>().velocity = speed * frontOfGun.forward;
             GameObject spawnedFlash = Instantiate(muzzleFlash, frontOfGun.position, frontOfGun.rotation);
             Destroy(spawnedFlash, 1f);
-            Destroy(spawnedBullet, 5f);
+            Destroy(spawnedBullet, 7f);            
+           // GunFired?.Invoke();
+            gm.GetComponent<GameManager>().shootAmmo();
             gunAnim.SetBool("Shoot", false);
-            GunFired?.Invoke();
         }
     }
 
-    public void AddOneBullet()
-    {
-        Ammo++;
-    }
+   
 
 
 }
