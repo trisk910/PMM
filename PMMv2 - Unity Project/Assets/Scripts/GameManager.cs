@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
     public bool cOrgullo = false;
     public bool cPereza = false;
 
+    private int medallonCounter = 0;
+
     //Demonio
     public GameObject Demonio;
     public Transform spawnPointPasillo2nPisoPasillo;
@@ -53,6 +55,8 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint1erPisoGaraje;
     public Transform spawnPoint1erPisoCocina;
     public Transform spawnPoint1erPisoBanyo;
+
+    public Transform LastSpawn;
 
     public int ammo = 0;
    
@@ -95,6 +99,10 @@ public class GameManager : MonoBehaviour
     {
         if (cCodicia && cEnvidia && cGula && cIra && cLujuria && cOrgullo && cPereza)
             winGame();
+        if(medallonCounter == 6)
+        {
+            demonioLastRespawn();
+        }
     }
     
     //Funciones Llaves
@@ -123,37 +131,44 @@ public class GameManager : MonoBehaviour
     {
         Envidia.SetActive(true);
         cEnvidia = true;
+        medallonCounter++;
     }
 
     public void showMedallonCodicia()
     {
         Codicia.SetActive(true);
         cCodicia = true;
+        medallonCounter++;
     }
     public void showMedallonGula()
     {
         Gula.SetActive(true);
         cGula= true;
+        medallonCounter++;
     }
     public void showMedallonIra()
     {
         Ira.SetActive(true);
         cIra = true;
+        medallonCounter++;
     }
     public void showMedallonLujuria()
     {
         Lujuria.SetActive(true);
         cLujuria = true;
+        medallonCounter++;
     }
     public void showMedallonOrgullo()
     {
         Orgullo.SetActive(true);
         cOrgullo= true;
+        medallonCounter++;
     }
     public void showMedallonPereza()
     {
         Pereza.SetActive(true);
         cPereza= true;
+        medallonCounter++;
     }
 
     //Funciones Cajas
@@ -213,11 +228,19 @@ public class GameManager : MonoBehaviour
         DemonClone.GetComponent<Ai>().setDemonState("follow");
     }
 
+    public void demonioLastRespawn()
+    {
+        GameObject DemonClone = Instantiate(Demonio, spawnPoint1erPisoBanyo.position, transform.rotation);
+        DemonClone.GetComponent<Ai>().LastTime();
+        DemonClone.GetComponent<Ai>().setDemonState("follow");
+        medallonCounter = 0;
+    }
+
 
     //Estado Juego
     public void endGame()
     {
-        SceneManager.LoadScene(2);
+       SceneManager.LoadScene(2);
     }
     public void winGame()
     {

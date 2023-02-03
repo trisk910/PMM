@@ -34,6 +34,7 @@ public class Ai : MonoBehaviour
     void Update()
     {
         DemonStates();
+
     }
     public void setDemonState(string state)
     {
@@ -79,6 +80,11 @@ public class Ai : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         //this.gameObject.SetActive(false);
         Destroy(this.gameObject);
+    }
+
+    public void LastTime()
+    {
+        followTimer = 30.0f;
     }
 
     private void OnCollisionEnter(Collision collision)

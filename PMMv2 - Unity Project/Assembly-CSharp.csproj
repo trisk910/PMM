@@ -96,15 +96,15 @@
     <Compile Include="Assets\Scripts\Medallones\Pereza.cs" />
     <Compile Include="Assets\Scripts\11 Wrist UI\ShotCounter.cs" />
     <Compile Include="Assets\Scripts\Player\Palanca.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger2pisoHab.cs" />
     <Compile Include="Assets\Materials\FFOSBodySocketInventory\UltraLowPoly\FireBullet.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger1PisoCocina.cs" />
     <Compile Include="Assets\Scripts\Linterna\addLinternaLife.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger1pisoGaraje.cs" />
     <Compile Include="Assets\_Flashlight PRO\_Assets\scripts\Flashlight_PRO.cs" />
+    <Compile Include="Assets\Scripts\Ai\Trigger1PisoBanyo.cs" />
     <Compile Include="Assets\Scripts\5 XR Ray Interactors\HandComplete.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Ai\Trigger2pisoHab.cs" />
-    <Compile Include="Assets\Scripts\Ai\Trigger1pisoGaraje.cs" />
-    <Compile Include="Assets\Scripts\Ai\Trigger1PisoCocina.cs" />
-    <Compile Include="Assets\Scripts\Ai\Trigger1PisoBanyo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
