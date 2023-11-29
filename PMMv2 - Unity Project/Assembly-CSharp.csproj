@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\Ai\Trigger1PisoBanyo.cs" />
     <Compile Include="Assets\Scripts\5 XR Ray Interactors\HandComplete.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Scripts\2 Grab Interactables\GrabReleaseController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

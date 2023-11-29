@@ -37,8 +37,14 @@ public class LinternaFuncion : MonoBehaviour
 
     public void turnOnLight()
     {
-        linternaLight.enabled = true;
-        drainBatteryLight = true;
+        if (!linternaLight.enabled && !drainBatteryLight)
+        {
+            linternaLight.enabled = true;
+            drainBatteryLight = true;
+        }
+        else
+            turnOffLight();
+      
     }
 
     public void drainBattery()
